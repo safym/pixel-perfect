@@ -1,0 +1,15 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+.pixel-perfect-ref {
+  position: fixed;
+  top: 20%;
+  left: 20%;
+  transform: translateX(-50%);
+  opacity: 0.5;
+}

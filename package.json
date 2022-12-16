@@ -1,0 +1,24 @@
+{
+  "name": "pixel-perfect",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "sass src/index.scss src/index.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/safym/pixel-perfect.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/safym/pixel-perfect/issues"
+  },
+  "homepage": "https://github.com/safym/pixel-perfect#readme",
+  "dependencies": {
+    "sass": "^1.56.2"
+  }
+}
