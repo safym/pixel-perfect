@@ -1,34 +1,25 @@
+body {
+  font: 100% Helvetica, sans-serif;
+}
+
+.pixel-perfect-ref {
+  position: fixed;
+  top: 20%;
+  left: 20%;
+  transform: translateX(-50%);
+  opacity: 0.5;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
   font: 100% Helvetica, sans-serif;
-  color: #333;
   margin: 0;
 }
 
-/* .main-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} */
-
-.wrapper {
-  display: inline-block;
-  position: relative;
-}
-
 #ref {
-  /* position: absolute;
-  top: 0;
-  left: 0; */
-
   width: auto;
   height: auto;
   opacity: 0.5;
@@ -47,18 +38,14 @@ body {
 }
 
 /* figures */
-
 #green-small-circle {
   position: absolute;
   width: 75px;
   height: 75px;
-
   background: #0ca565;
-
   position: absolute;
   top: 103px;
   right: 57px;
-
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
@@ -77,22 +64,18 @@ body {
   position: absolute;
   width: 226px;
   height: 60px;
-
   top: 202px;
   left: 38px;
-
   background: #920fbf;
   border-radius: 22px;
 }
 
 #blue-rectangle {
   transform-origin: top left;
-
   background: #1c3f9b;
   transform: rotate(-42.79deg);
   height: 233px;
   width: 35px;
-
   position: absolute;
   left: 58px;
   top: 60px;
@@ -102,7 +85,7 @@ body {
   position: absolute;
   width: 301px;
   height: 301px;
-
   background: #d9d9d9;
 }
+
 /*# sourceMappingURL=index.css.map */

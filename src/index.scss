@@ -1,9 +1,13 @@
 $font-stack:    Helvetica, sans-serif;
-$primary-color: #333;
+$green-color-1: #248456;
+$green-color-2: #0ca565;
+$blue-color: #1c3f9b;
+$purple-color: #920fbf;
+$red-color: #ce3607;
+$background-color: #d9d9d9;
 
 body {
   font: 100% $font-stack;
-  color: $primary-color;
 }
 
 .pixel-perfect-ref {
@@ -12,4 +16,92 @@ body {
   left: 20%;
   transform: translateX(-50%);
   opacity: 0.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font: 100% Helvetica, sans-serif;
+  margin: 0;
+}
+
+#ref {
+
+  width: auto;
+  height: auto;
+  opacity: 0.5;
+}
+
+#green-big-circle {
+  position: absolute;
+  top: -80px;
+  left: -70px;
+  width: 240px;
+  height: 240px;
+  background: $green-color-1;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+/* figures */
+
+#green-small-circle {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+
+  background: $green-color-2;
+
+  position: absolute;
+  top: 103px;
+  right: 57px;
+
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+#red-triangle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-style: solid;
+  border-width: 0 0 82px 75px;
+  border-color: transparent transparent $red-color transparent;
+}
+
+#purple-rectangle {
+  position: absolute;
+  width: 226px;
+  height: 60px;
+
+  top: 202px;
+  left: 38px;
+
+  background: $purple-color;
+  border-radius: 22px;
+}
+
+#blue-rectangle {
+  transform-origin: top left;
+
+  background: $blue-color;
+  transform: rotate(-42.79deg);
+  height: 233px;
+  width: 35px;
+
+  position: absolute;
+  left: 58px;
+  top: 60px;
+}
+
+#background {
+  position: absolute;
+  width: 301px;
+  height: 301px;
+
+  background: $background-color;
 }
