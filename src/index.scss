@@ -1,4 +1,5 @@
 $font-stack:    Helvetica, sans-serif;
+$text-color: #454545;
 $green-color-1: #248456;
 $green-color-2: #0ca565;
 $blue-color: #1c3f9b;
@@ -6,102 +7,162 @@ $purple-color: #920fbf;
 $red-color: #ce3607;
 $background-color: #d9d9d9;
 
-body {
-  font: 100% $font-stack;
-}
+@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
 
-.pixel-perfect-ref {
-  position: fixed;
-  top: 20%;
-  left: 20%;
-  transform: translateX(-50%);
-  opacity: 0.5;
+body {
+  font-family: 'Mukta', sans-serif;
+  margin: 0;
+  color: $text-color;
 }
 
 * {
   box-sizing: border-box;
 }
 
-body {
-  font: 100% Helvetica, sans-serif;
-  margin: 0;
+.pixel-perfect {
+  clip-path: url(#clipping);
+}
+
+.main-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+.wrapper {
+  // display: inline-block;
+  position: relative;
 }
 
 #ref {
+  opacity: 0;
+}
 
-  width: auto;
-  height: auto;
-  opacity: 0.5;
+// figures 
+#green-big-circle,
+#green-small-circle,
+#red-triangle,
+#purple-rectangle,
+#blue-rectangle,
+#background {
+  position: absolute;
 }
 
 #green-big-circle {
-  position: absolute;
   top: -80px;
   left: -70px;
   width: 240px;
   height: 240px;
+
   background: $green-color-1;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
 }
 
-/* figures */
-
 #green-small-circle {
-  position: absolute;
+  top: 103px;
+  left: 169px;
   width: 75px;
   height: 75px;
-
+  
   background: $green-color-2;
-
-  position: absolute;
-  top: 103px;
-  right: 57px;
-
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
 }
 
 #red-triangle {
-  position: absolute;
   top: 0;
-  right: 0;
+  left: 226px;
+
   border-style: solid;
   border-width: 0 0 82px 75px;
   border-color: transparent transparent $red-color transparent;
 }
 
 #purple-rectangle {
-  position: absolute;
-  width: 226px;
-  height: 60px;
-
   top: 202px;
   left: 38px;
+  width: 226px;
+  height: 60px;
 
   background: $purple-color;
   border-radius: 22px;
 }
 
 #blue-rectangle {
-  transform-origin: top left;
-
-  background: $blue-color;
-  transform: rotate(-42.79deg);
+  left: 58px;
+  top: 60px;
   height: 233px;
   width: 35px;
 
-  position: absolute;
-  left: 58px;
-  top: 60px;
+  background: $blue-color;
+  transform: rotate(-42.79deg);
+  transform-origin: top left;
 }
 
 #background {
-  position: absolute;
   width: 301px;
   height: 301px;
 
   background: $background-color;
+}
+
+// controls
+
+.controls {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 10px;
+  padding-top: 0px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.checkbox input {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	margin: 10px 0 0 20px;
+}
+.checkbox__text {
+	position: relative;
+	padding: 0 0 0 60px;
+  margin-bottom: 20px;
+	cursor: pointer;
+}
+.checkbox__text:before {
+	content: '';
+	position: absolute;
+	top: -4px;
+	left: 0;
+	width: 50px;
+	height: 26px;
+	border-radius: 13px;
+	background: #CDD1DA;
+	box-shadow: inset 0 2px 3px rgba(0,0,0,.2);
+	transition: .15s;
+}
+.checkbox__text:after {
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: 2px;
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+	background: #FFF;
+	box-shadow: 0 2px 5px rgba(0,0,0,.3);
+	transition: .15s;
+}
+.checkbox input:checked + .checkbox__text:before {
+	background: #64daa9;
+}
+.checkbox input:checked + .checkbox__text:after {
+	left: 26px;
 }

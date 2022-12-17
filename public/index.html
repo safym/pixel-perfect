@@ -6,35 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="../src/index.css" />
-
-    <title>Document</title>
   </head>
   <body>
-
     <div class="main-wrapper">
-
       <div class="wrapper">
         <!-- Верстка -->
-        <div class="pixel-perfect" id="container">
-
+        <div class="pixel-perfect" id="layers">
           <div id="background"></div>
-          <div id="purple-rectangle"></div>
-
           <div id="green-big-circle"></div>
-
-          <div id="blue-rectangle-wrapper">
-            <div id="blue-rectangle"></div>
-          </div>
-         
+          <div id="blue-rectangle"></div>
+          <div id="purple-rectangle"></div>
           <div id="green-small-circle"></div>
           <div id="red-triangle"></div>
         </div>
-  
+
         <!-- Файл для сравнения -->
-        <img class="pixel-perfect" id="ref" src="../src/img/ref.png" alt="" />
+        <img id="ref" src="../src/img/ref.png" alt="" />
       </div>
 
+      <div class="controls">
+        <label class="checkbox">
+          <input
+            type="checkbox"
+            name="checkbox"
+            id="layers-switch"
+            checked="checked"
+          />
+          <div class="checkbox__text">Показать слой макета</div>
+        </label>
+
+        <label class="checkbox">
+          <input type="checkbox" name="checkbox" id="ref-switch" />
+          <div class="checkbox__text">Показать слой референса</div>
+        </label>
+
+        <label class="checkbox">
+          <input type="checkbox" name="checkbox" id="blend-switch" />
+          <div class="checkbox__text">Режим исключения</div>
+        </label>
+      </div>
     </div>
-   
+
+    <svg>
+      <defs>
+        <clipPath id="clipping">
+          <rect x="0" y="0" width="301" height="301" />
+        </clipPath>
+      </defs>
+    </svg>
+
+    <script src="../src/index.js"></script>
   </body>
 </html>
