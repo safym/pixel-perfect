@@ -1,11 +1,17 @@
+$index: calc(1vw + 1vh);
 $font-stack:    Helvetica, sans-serif;
 $text-color: #454545;
+
 $green-color-1: #248456;
 $green-color-2: #0ca565;
 $blue-color: #1c3f9b;
 $purple-color: #920fbf;
 $red-color: #ce3607;
 $background-color: #d9d9d9;
+
+$checkbox-circle: #fff;
+$checkbox-checked: #64daa9;
+$checkbox-unchecked: #CDD1DA;
 
 @import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
 
@@ -33,7 +39,6 @@ body {
 }
 
 .wrapper {
-  // display: inline-block;
   position: relative;
 }
 
@@ -114,54 +119,74 @@ body {
 
 // controls
 
+.checkbox input,
+.checkbox__text:before,
+.checkbox__text:after  {
+  position: absolute;
+}
+
+h1 {
+  font-size: calc(1.7 * $index);
+  text-align: center;
+  margin-bottom: calc(2 * $index);
+}
+
 .controls {
   display: block;
   position: relative;
-  padding-left: 30px;
-  margin-bottom: 10px;
-  padding-top: 0px;
+
+  padding-top: 0;
+  padding-left: calc(2.5 * $index);
+  margin-bottom: calc(1 * $index);
+
+  font-size: calc(1.3 * $index);
   cursor: pointer;
-  font-size: 13px;
 }
 
 .checkbox input {
-	position: absolute;
-	z-index: -1;
+	margin-bottom: calc(1.7 * $index);
+  margin-left: calc(2.2 * $index);
+
+  z-index: -1;
 	opacity: 0;
-	margin: 10px 0 0 20px;
 }
+
 .checkbox__text {
 	position: relative;
-	padding: 0 0 0 60px;
-  margin-bottom: 20px;
+
+	padding-left:  calc(6 * $index);
+  margin-bottom:  calc(2.2 * $index);
+
 	cursor: pointer;
 }
 .checkbox__text:before {
 	content: '';
-	position: absolute;
+
 	top: -4px;
 	left: 0;
 	width: 50px;
 	height: 26px;
+
 	border-radius: 13px;
-	background: #CDD1DA;
+	background: $checkbox-unchecked;
 	box-shadow: inset 0 2px 3px rgba(0,0,0,.2);
 	transition: .15s;
 }
 .checkbox__text:after {
 	content: '';
-	position: absolute;
+
 	top: -2px;
 	left: 2px;
 	width: 22px;
 	height: 22px;
+
 	border-radius: 50%;
-	background: #FFF;
+	background: $checkbox-circle;
 	box-shadow: 0 2px 5px rgba(0,0,0,.3);
 	transition: .15s;
 }
 .checkbox input:checked + .checkbox__text:before {
-	background: #64daa9;
+	background: $checkbox-checked;
 }
 .checkbox input:checked + .checkbox__text:after {
 	left: 26px;

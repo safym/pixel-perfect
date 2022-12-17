@@ -17,7 +17,7 @@ controls.setChecked()
 
 controls.referenceCheckbox.addEventListener('change', function() {
   if (this.checked) {
-    setDensity(controls.element.referenceElement, 0.5);
+    setDensity(controls.element.referenceElement, 0.7);
   } else {
     setDensity(controls.element.referenceElement, 0);
   }

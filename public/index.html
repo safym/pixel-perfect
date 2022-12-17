@@ -4,12 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ТЗ</title>
 
+    <!-- стиль -->
     <link rel="stylesheet" href="../src/index.css" />
   </head>
   <body>
     <div class="main-wrapper">
       <div class="wrapper">
+
         <!-- Верстка -->
         <div class="pixel-perfect" id="layers">
           <div id="background"></div>
@@ -24,29 +27,29 @@
         <img id="ref" src="../src/img/ref.png" alt="" />
       </div>
 
+
+      <!-- блок управления слоями -->
+
       <div class="controls">
+        <h1>Настройка слоев:</h1>
         <label class="checkbox">
-          <input
-            type="checkbox"
-            name="checkbox"
-            id="layers-switch"
-            checked="checked"
-          />
+          <input type="checkbox" id="layers-switch" checked="checked" />
           <div class="checkbox__text">Показать слой макета</div>
         </label>
 
         <label class="checkbox">
-          <input type="checkbox" name="checkbox" id="ref-switch" />
+          <input type="checkbox" id="ref-switch" />
           <div class="checkbox__text">Показать слой референса</div>
         </label>
 
         <label class="checkbox">
-          <input type="checkbox" name="checkbox" id="blend-switch" />
+          <input type="checkbox" id="blend-switch" />
           <div class="checkbox__text">Режим исключения</div>
         </label>
       </div>
     </div>
 
+    <!-- маска для обрезания фигур по размеру картинки -->
     <svg>
       <defs>
         <clipPath id="clipping">
@@ -55,6 +58,7 @@
       </defs>
     </svg>
 
+    <!-- скрипт для чекбоксов -->
     <script src="../src/index.js"></script>
   </body>
 </html>
