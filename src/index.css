@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Mukta&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400&display=swap");
 body {
-  font-family: "Mukta", sans-serif;
+  font-family: "Nunito", sans-serif;
   margin: 0;
   color: #454545;
 }
@@ -100,9 +101,9 @@ body {
 }
 
 h1 {
-  font-size: calc(1.7 * (1vw + 1vh));
+  font-size: 16px;
   text-align: center;
-  margin-bottom: calc(2 * (1vw + 1vh));
+  margin-bottom: 20px;
 }
 
 .controls {
